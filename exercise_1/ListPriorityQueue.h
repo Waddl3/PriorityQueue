@@ -26,14 +26,10 @@ public:
     }
 
     //removes the entry with smallest key
-    void removeMin() {
-
-    }
+    void removeMin() { return L.pop_front(); }
 
     //returns, but does NOT remove, an entry with smallest key.
-    const E& min() const {
-
-    }
+    const E& min() const { return L.front(); }
 
     //number of elements
     int size() const {
