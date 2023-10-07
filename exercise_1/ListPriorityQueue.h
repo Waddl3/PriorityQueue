@@ -15,7 +15,7 @@ public:
     //We do not bother to give an explicit consturcotor for our class,
     //relying instead on default constructor
         //Default constructor fro the STL list produces an empty list,
-        //which is exactly what we want.
+        //which is exactly what we want
 
     //insert an entry e
     void insert(const E& e) {
@@ -26,7 +26,7 @@ public:
     }
 
     //removes the entry with smallest key
-    void removeMin() { return L.pop_front(); }
+    void removeMin() { L.pop_front(); }
 
     //returns, but does NOT remove, an entry with smallest key.
     const E& min() const { return L.front(); }
@@ -39,6 +39,10 @@ public:
     //check if queue if empty
     bool empty() const {
         return L.empty();
+    }
+
+    bool operator()(const E& p, const E& q) {
+        return p < q;
     }
 
 };
