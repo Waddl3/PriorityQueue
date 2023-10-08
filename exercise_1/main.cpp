@@ -3,13 +3,17 @@
 
 int main(int argc, char const *argv[])
 {
-    ListPriorityQueue<int, int> test;
+    ListPriorityQueue<int, Less<int>> queue;
 
-    test.insert(5);
-    test.insert(4);
-    test.insert(7);
-    test.insert(1);
-    std::cout << test.min();
+    queue.insert(5);
+    queue.insert(4);
+    queue.insert(7);
+    queue.insert(1);
+
+     while (!queue.empty()) {
+        std::cout << "Min: " << queue.min() << std::endl;
+        queue.removeMin();
+    }
 
     return 0;
 }

@@ -3,6 +3,14 @@
 
 #include <list>
 
+template<typename E>
+class Less {
+public:
+    bool operator()(const E& p, const E& q) {
+        return p < q;
+    }
+ };
+
 template <typename E, typename C>
 class ListPriorityQueue {
 
@@ -39,10 +47,6 @@ public:
     //check if queue if empty
     bool empty() const {
         return L.empty();
-    }
-
-    bool operator()(const E& p, const E& q) {
-        return p < q;
     }
 
 };
