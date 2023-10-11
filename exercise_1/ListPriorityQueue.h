@@ -7,7 +7,7 @@ template<typename E>
 class Comparator {
 public:
     bool operator()(const E& q, const E& p) {
-        return p > q;
+        return p < q;
     }
 };
 
