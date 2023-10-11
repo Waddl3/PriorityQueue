@@ -6,7 +6,7 @@
 template<typename E>
 class Comparator {
 public:
-    bool operator()(const E& q, const E& p) {
+    bool operator()(const E& p, const E& q) {
         return p < q;
     }
 };

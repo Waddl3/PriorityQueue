@@ -5,18 +5,23 @@
 int main(int argc, char const *argv[])
 {
     ListPriorityQueue<int, Comparator<int>> pq;
-    int num;
+    int num = 0;
+    int count = 5;
 
-    std::ifstream inFile;
-    inFile.open("small1k.txt", std::fstream::binary);
+    std::fstream inFile("C:/Users/jesus/Documents/GitHub/PriorityQueue/small1k.txt", std::ios_base::in);
 
+    if(!inFile.is_open()) {
+        std::cout << "Error: Unable to open file." << std::endl;
+        return 1;
+    }
+    
     while(inFile >> num){
         pq.insert(num);
     }
 
     inFile.close();
 
-    while(!pq.empty()) {
+    while(!pq.empty() && count--) {
         std::cout << pq.min() << " ";
         pq.removeMin();
     }
