@@ -20,10 +20,12 @@ C isLess;
 
 public:
 
-    //We do not bother to give an explicit consturcotor for our class,
-    //relying instead on default constructor
-        //Default constructor fro the STL list produces an empty list,
-        //which is exactly what we want
+    /*
+        We do not bother to give an explicit consturcotor for our class,
+        relying instead on default constructor
+            Default constructor fro the STL list produces an empty list,
+            which is exactly what we want
+    */
 
     //insert an entry e
     void insert(const E& e) {
