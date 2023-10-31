@@ -16,5 +16,3 @@ This repository contains completed exercises for CSCI 240's PA 6 dealing with Pr
 - **Extra Credit Option 2:** Pseudocode for insert() and removeMin() using a linked binary tree.
 
 Each exercise folder contains specific implementation details and relevant files. Feel free to explore individual folders for more details.
-
-Happy learning!
